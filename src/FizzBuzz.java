@@ -12,31 +12,36 @@ class FizzBuzz {
         int j = 1;
 
         while (j < 100){
-            boolean divisibleBy3 = j % 3 == 0;
-            boolean divisibleBy5 = j % 5 == 0;
-
-            if (divisibleBy3 && divisibleBy5) {
-
-                System.out.println("Fizz Buzz");
-
-            } else if (divisibleBy3) {
-
-                System.out.println("Fizz");
-
-            } else if (divisibleBy5) {
-
-                System.out.println("Buzz");
-
-            } else {
-
-                System.out.println(j);
-
-            }
-
-            j++;
+            j = getJ(j);
 
 
         }
+    }
+
+    private static int getJ(int j) {
+        boolean divisibleBy3 = j % 3 == 0;
+        boolean divisibleBy5 = j % 5 == 0;
+
+        if (divisibleBy3 && divisibleBy5) {
+
+            System.out.println("Fizz Buzz");
+
+        } else if (divisibleBy3) {
+
+            System.out.println("Fizz");
+
+        } else if (divisibleBy5) {
+
+            System.out.println("Buzz");
+
+        } else {
+
+            System.out.println(j);
+
+        }
+
+        j++;
+        return j;
     }
 
     public static void doFizzBuzz(int i) {
