@@ -1,21 +1,22 @@
 public class Multiples {
-    public static void main(String[] args) {
+    public static int main(int n, int a, int b) {
         int count = 0;
-        int i =  1;
-        while (i < 1000){
-            count += result(i);
+        int i = 1;
+        while (i < n){
+            boolean divisibleBya = i % a == 0;
+            boolean divisibleByb = i % b == 0;
+            if (divisibleBya || divisibleByb){
+                count++;
+            }
             i ++;
         }
-        System.out.println("The number divisible by 3 and 5 are: " + count);
-    }
-    private static int result(int i){
-        int count = 0;
-        boolean divisibleBy3 = i % 3 == 0;
-        boolean divisibleBy5 = i % 5 == 0;if (divisibleBy3 || divisibleBy5) {
-             count ++;
-        }
+        //System.out.println("The number divisible by 3 and 5 are: " + count);
         return count;
+    }
 
-
+    public static int main() {
+        int count = main(1000, 3, 5);
+        System.out.println("The number divisible by 3 and 5 are: " + count);
+        return count;
     }
 }
